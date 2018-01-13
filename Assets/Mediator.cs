@@ -30,11 +30,12 @@ public class Mediator : MonoBehaviour {
         messanger.Send(msgType, param);
     }
 
-    protected void AddHandler(string msgType, Action<object> handler) {
+
+    protected void AddHandler<T>(string msgType, Action<T> handleInt) {
         if (messanger == null) {
             init();
         }
 
-        messanger.AddHandler(msgType, handler);
+        messanger.AddHandler<T>(this, msgType, handleInt);
     }
 }

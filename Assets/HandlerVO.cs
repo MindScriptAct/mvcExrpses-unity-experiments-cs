@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class HandlerVO {
 
-    public Action<object> handler;
+    //public Type paramType;
+    public object handler;
+    //public object target;
 
-    public HandlerVO(Action<object> handler) {
-        this.handler = handler;
-    }
 
 }
